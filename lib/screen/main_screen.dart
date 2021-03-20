@@ -9,7 +9,6 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-
   int currentIndex = 0;
 
   void onIndexChanged(int index) {
@@ -56,9 +55,19 @@ class _MainScreenState extends State<MainScreen> {
               ),
             ),
             ListTile(
+              onTap: () {
+                Navigator.pushNamed(context, '/history');
+              },
               leading: Icon(Icons.people),
-              title: Text("Profile"),
-            )
+              title: Text("ประวัติ"),
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.pushNamed(context, '/credit');
+              },
+              leading: Icon(Icons.people),
+              title: Text("Credit"),
+            ),
           ],
         ),
       ),
@@ -72,9 +81,9 @@ class _MainScreenState extends State<MainScreen> {
         items: pages
             .map(
               (items) => BottomNavigationBarItem(
-                icon: items.icon, 
+                icon: items.icon,
                 label: items.label,
-                ),
+              ),
             )
             .toList(),
       ),

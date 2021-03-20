@@ -32,4 +32,10 @@ List<Page> pages = [
     page: ActivityScreen(),
     title: "กิจกรรม",
   ),
+   Page(
+    icon: Icon(Icons.home),
+    label: "credit",
+    page: ActivityScreen(),
+    title: "Credit",
+  ),
 ];
